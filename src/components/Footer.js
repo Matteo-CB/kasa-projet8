@@ -14,7 +14,7 @@ const Footer = () => {
       : "./images/LOGO.png";
   return (
     <footer>
-      <img src={logoSrc} alt="logo" />
+      <img width={120} src={logoSrc} alt="logo" />
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   );

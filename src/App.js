@@ -10,24 +10,32 @@ const App = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("../data/logements.json")
-      .then((response) => {
-        // Traitez les données JSON ici
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("../data/logements.json");
         const sortedData = response.data.filter((element, index) =>
           [2, 3, 4, 5, 7, 8].includes(index + 1)
-        ); // en mettre 6 mais marche sans
-        
+        );
         setData(sortedData);
-      })
-      .catch((error) => {
-        // Gérez les erreurs ici
+      } catch (error) {
         console.error(
           "Erreur lors de la récupération des données JSON :",
           error
         );
-      });
+      }
+    };
+
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("/service-worker.js");
+      });
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
