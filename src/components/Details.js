@@ -14,7 +14,7 @@ const Details = ({ detailsData }) => {
       : "./images/arrow-down-bold-svgrepo-com.svg";
 
   const arrowRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -25,12 +25,12 @@ const Details = ({ detailsData }) => {
   };
 
   const arrowStyle = {
-    transform: isOpen ? "rotate(0)" : "rotate(-180deg)",
+    transform: isOpen ? "rotate(180deg)" : "rotate(0)",
   };
 
   return (
-    <details>
-      <summary onClick={handleToggle}>
+    <div className="details">
+      <div className="details-title" onClick={handleToggle}>
         {detailsData.title}{" "}
         <img
           width={25}
@@ -40,9 +40,12 @@ const Details = ({ detailsData }) => {
           alt="arrow"
           style={arrowStyle}
         />
-      </summary>
-      <p>{detailsData.content}</p>
-    </details>
+      </div>
+
+      <p className={isOpen ? "down content" : "content up"}>
+        {detailsData.content}
+      </p>
+    </div>
   );
 };
 

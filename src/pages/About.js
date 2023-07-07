@@ -4,8 +4,6 @@ import Footer from "../components/Footer";
 import Details from "../components/Details";
 
 const About = () => {
-  
-
   return (
     <>
       <Header />
