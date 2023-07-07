@@ -1,0 +1,44 @@
+@import '../settings';
+
+header{
+
+    color: $primary;
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul{
+        min-width: 300px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .selected{
+        text-decoration: underline;
+    }
+    @media screen and (max-width:748px) {
+        &{
+            width:90%;
+            ul{
+                min-width: 200px;
+                font-size: 0.8rem;
+            }
+            img{
+                width: 150px;
+            }
+        }
+    }
+    @media screen and (max-width:390px) {
+        &{
+            
+            ul{
+                
+                min-width: 130px;
+                font-size: 0.5rem;
+            }
+            img{
+                width: 100px;
+            }
+        }
+    }
+}

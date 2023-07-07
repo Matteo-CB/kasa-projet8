@@ -1,0 +1,46 @@
+@import '../settings';
+
+.not-found{
+    text-align: center;
+    p{
+
+        @media screen and (max-width:600px) {
+            &{
+                
+                font-size: 0.8rem;
+            }
+        }
+    }
+    a{
+        text-decoration: underline;
+        @media screen and (max-width:600px) {
+            &{
+                
+                font-size: 0.6rem;
+            }
+        }
+        
+    }
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 60vh;
+    h1{
+        font-size: 8rem;
+        @media screen and (max-width:600px) {
+            &{
+                
+                font-size: 6rem;
+            }
+        }
+        @media screen and (max-width:400px) {
+            &{
+                
+                font-size: 4rem;
+            }
+        }
+    }
+
+}

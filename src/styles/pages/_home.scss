@@ -1,0 +1,42 @@
+@import '../settings';
+
+.home {
+    .home-header {
+        border-radius: 25px;
+        padding: 50px;
+        background: $gradient, url(../../images/bg-home.png) center/cover;
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width:748px) {
+            &{
+                width: 90%;
+                justify-content: left;
+                padding: 35px;
+            }
+        }
+        h1{
+            font-weight: 400;
+            font-size: 1.5rem;
+            @media screen and (max-width:748px) {
+                &{
+                    font-size: 1rem;
+                    
+                    
+                }
+            }
+            @media screen and (max-width:480px) {
+                &{
+                    font-size: 0.8rem;
+                    
+                    
+                }
+            }
+        }
+    }
+}
+
+

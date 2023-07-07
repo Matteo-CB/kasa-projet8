@@ -1,0 +1,14 @@
+@import './settings';
+
+// Pages
+
+@import './pages/home';
+@import './pages/about';
+@import './pages/not-found';
+@import './pages/housing-page';
+
+// Components
+
+@import './components/header';
+@import './components/housing-container';
+@import './components/footer';

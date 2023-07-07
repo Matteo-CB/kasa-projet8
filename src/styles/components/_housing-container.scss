@@ -1,0 +1,64 @@
+.housing-container {
+    border-radius: 20px;
+    background: $grey;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    width: 80%;
+    margin: 20px auto;
+    @media screen and (max-width:748px) {
+        width: 90%;
+        &{
+           background: none;
+        }
+    }
+
+  }
+.card {
+    cursor: pointer;
+    flex: 1 0 20%;
+    width: 340px;
+    min-width: 340px;
+    max-width: 340px;
+    height: 340px;
+    background: $gradient2, $primary center/cover;
+    margin: 30px;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    
+    p{
+        position: absolute;
+        bottom: 20px;
+        width: 60%;
+        @media screen and (max-width:748px) {
+            &{
+                font-size: 0.8rem;
+            }
+        }
+    }
+    @media screen and (max-width:748px) {
+        &{
+            width: 300px;
+            margin: 15px;
+            min-width: 300px;
+            max-width: 300px;
+            height: 200px;
+        }
+    }
+    @media screen and (max-width:330px) {
+        &{
+            width: 240px;
+            margin: 15px;
+            min-width: 240px;
+            max-width: 240px;
+            height: 200px;
+            margin: 20px 0;
+        }
+    }
+    
+    
+}
