@@ -48,12 +48,14 @@ const Infos = ({ housingData }) => {
           detailsData={{
             title: "Description",
             content: housingData && housingData.description,
+            id: 5,
           }}
         />
         <Details
           detailsData={{
             title: "Équipements",
             content: housingData && equipments,
+            id: 6,
           }}
         />
       </div>

@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
   const logoWidth = windowWidth < 390 ? 100 : 150;
   return (
-    <header>
+    <header id="header">
       <NavLink to={"/"}>
         <img width={logoWidth} src={logoSrc} alt="logo" />
       </NavLink>
@@ -38,7 +38,7 @@ const Header = () => {
               Accueil
             </li>
           </NavLink>
-          <NavLink to={"/a-propos"}>
+          <NavLink to={"/a-propos#header"}>
             <li className={location.pathname === "/a-propos" ? "selected" : ""}>
               A Propos
             </li>
