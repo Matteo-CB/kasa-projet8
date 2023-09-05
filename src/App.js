@@ -13,9 +13,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get("../data/logements.json");
-        const sortedData = response.data.filter((element, index) =>
-          [2, 3, 4, 5, 7, 8].includes(index + 1)
-        );
+        const sortedData = response.data.slice(1, 7)
         setData(sortedData);
       } catch (error) {
         console.error(
