@@ -4,20 +4,26 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import Infos from "../components/Infos";
+import NotFound from "./NotFound";
 
 const HousingPage = ({ data }) => {
   const { id } = useParams();
   const housingData = data && data[Number(id)];
-
   return (
-    <>
-      <Header />
-      <main className="housing-page">
-        <Carousel housingData={housingData && housingData} />
-        <Infos housingData={housingData && housingData} />
-      </main>
-      <Footer />
-    </>
+    <div>
+      {data.length - 1 >= id ? (
+        <>
+          <Header />
+          <main className="housing-page">
+            <Carousel housingData={housingData && housingData} />
+            <Infos housingData={housingData && housingData} />
+          </main>
+          <Footer />{" "}
+        </>
+      ) : (
+        <NotFound />
+      )}
+    </div>
   );
 };
 

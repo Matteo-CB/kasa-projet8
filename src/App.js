@@ -13,7 +13,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get("../data/logements.json");
-        const sortedData = response.data.slice(1, 7)
+        const sortedData = response.data.slice(1, 7);
         setData(sortedData);
       } catch (error) {
         console.error(
